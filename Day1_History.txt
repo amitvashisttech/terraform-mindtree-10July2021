@@ -1,0 +1,46 @@
+   58  cd terraform-mindtree-10July2021/
+   59  git pull 
+   60  ls
+   61  cd 01-First-Deployment/
+   62  ls
+   63  cat first_deployment.tf 
+   64  ls
+   65  cd ..
+   66  ls
+   67  cd 00-
+   68  cd 00-Install-Terraform/
+   69  ls
+   70  vim README.md
+   71  ls
+   72  cd ..
+   73  ls
+   74  cd 
+   75  ls
+   76  vim .bashrc 
+   77  lsl
+   78  ls
+   79  source .bashrc 
+   80  set | grep -i AWS 
+   81  ls
+   82  cd terraform-mindtree-10July2021/
+   83  ls
+   84  cd 01-First-Deployment/
+   85  ls
+   86  vim first_deployment.tf 
+   87  ls
+   88  terraform init 
+   89  ls -a 
+   90  ls -R .terraform/
+   91  ls
+   92  terraform apply 
+   93  ks
+   94  ls
+   95  terraform show
+   96  terraform destroy 
+   97  ls
+   98  cd ..
+   99  ls
+  100  history 
+  101  vim 01-First-Deployment/first_deployment.tf 
+  102  ls
+  103  history > Day1_History.txt

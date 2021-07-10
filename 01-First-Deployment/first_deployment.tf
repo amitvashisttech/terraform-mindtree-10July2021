@@ -1,11 +1,11 @@
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 
 resource "aws_instance" "web" {
-  ami           = "ami-0947d2ba12ee1ff75"
+  ami           = "ami-0d563aeddd4be7fff"
   instance_type = "t2.micro"
 
   tags = {
