@@ -21,7 +21,7 @@ dot resource.dot -Tsvg -o resource.svg
 ```
 mkdir -p /var/www/html/Terraform-Images
 cp -rf resource.svg /var/www/html/Terraform-Images/01-resource.svg
-systemctl restart apache.service
+systemctl restart apache2.service
 ip addr 
 ```
 
