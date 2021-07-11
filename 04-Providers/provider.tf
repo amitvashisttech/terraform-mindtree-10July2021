@@ -1,12 +1,12 @@
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region  = "us-east-1"
   version = ">=3.7,<=3.11"
 }
 
 
 provider "aws" {
-  region = "us-west-1"
+  region  = "us-west-1"
   version = ">=3.7,<=3.11"
   alias   = "us-west-1"
 }
@@ -20,7 +20,7 @@ resource "aws_instance" "frontend_east" {
 
 
 resource "aws_instance" "frontend_west" {
-  count  = 1
+  count         = 1
   ami           = "ami-0ed05376b59b90e46"
   instance_type = "t2.micro"
   provider      = aws.us-west-1
