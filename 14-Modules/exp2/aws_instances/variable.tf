@@ -34,7 +34,7 @@ variable "ec2_count" {
 
 
 variable "region" { 
-  default = "us-east-1"
+  default = "us-west-1"
 }
 
 
