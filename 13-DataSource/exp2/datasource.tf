@@ -118,7 +118,7 @@ resource "aws_instance" "east_backend" {
   availability_zone = data.aws_availability_zones.zones_east.names[count.index]
   count             = 2
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
   tags = {
     Name = local.default_backend_name
@@ -134,7 +134,7 @@ resource "aws_instance" "west_backend" {
   count             = var.multi-region-deployment ? 2 : 0
   provider      = aws.us-west-1
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
   tags = {
     Name = local.west_backend_name
