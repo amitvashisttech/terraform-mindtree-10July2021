@@ -1,0 +1,36 @@
+    1  ls
+    2  cd 20-Ansible/
+    3  ls
+    4  mkdir 01-Inventory
+    5  ls
+    6  cd 01-Inventory/
+    7  ls
+    8  vim inventory
+    9  ls
+   10  apt-get install ansible -y 
+   11  cat /etc/apt/sources.list
+   12  ansible --version 
+   13  cat inventory 
+   14  ansible all -i inventory -m ping -u vagrant -k 
+   15  apt-get install sshpass -y 
+   16  ansible all -i inventory -m ping -u vagrant -k 
+   17  ssh vagrant@172.31.0.100
+   18  cat /root/.ssh/known_hosts 
+   19  ansible all -i inventory -m ping -u vagrant -k 
+   20  ping google.com 
+   21  df -h 
+   22  ansible-doc  -l 
+   23  ansible-doc  command
+   24  df -h 
+   25  ansible all -i inventory -m command -a 'df -h' -u vagrant -k 
+   26  vim inventory 
+   27  ansible all -i inventory -m ping -u vagrant -k 
+   28  ansible all -i inventory -m command -a 'df -h' -u vagrant -k 
+   29  grep -i HOST_KEY_CHECKING /etc/ansible/ansible.cfg 
+   30  cd ..
+   31  ls
+   32  cd ..
+   33  ls
+   34  cd 20-Ansible/
+   35  ls
+   36  history > Ansible_History.txt
