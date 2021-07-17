@@ -1,11 +1,33 @@
 ---
 
 - hosts: web
-  become: yes
-  become_method: sudo
+  name: "WebServer Deployment Play"
   tasks:
   - name: Install Apache Packages 
     apt: name=apache2 state=present
+    when: ansible_os_family=="Debian"
 
   - name: Start Apache Service
     service: name=apache2 state=started
+    when: ansible_os_family=="Debian"
+
+  - name: Install HTTPD Packages 
+    yum: name=httpd state=present
+    when: ansible_os_family=="RedHat"
+
+  - name: Start HTTPD Service
+    service: name=httpd state=started
+    when: ansible_os_family=="RedHat"
+
+  - name: Custom Web Page Deployment
+    copy: src=files/index.html dest=/var/www/html/index.html
+
+  - name: Custom Info Page Deployment
+    template: src=templates/info.j2 dest=/var/www/html/info.html
+
+- hosts: 'web:db'
+  name: "Git Deployment Play"
+  tasks:
+  - name: Install git Packages 
+    apt: name=git state=present
+
