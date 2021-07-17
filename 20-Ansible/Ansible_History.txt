@@ -89,3 +89,106 @@
    89  cd ..
    90  ls
    91  history > Ansible_History.txt 
+   92  ls
+   93  cd ..
+   94  ls
+   95  git add . ; git commit -m "20-Ansible"; git push 
+   96  ls
+   97  cd 20-Ansible/
+   98  ls
+   99  cd 02-Playbook/
+  100  s
+  101  ls
+  102  cat playbook.yaml 
+  103  ls
+  104  vim ansible.cfg
+  105  grep -i Checking /etc/ansible/ansible.cfg 
+  106  grep -i host_key_checking /etc/ansible/ansible.cfg 
+  107  grep -i host_key_checking /etc/ansible/ansible.cfg  >> ansible.cfg 
+  108  grep -i inventory /etc/ansible/ansible.cfg  
+  109  grep -i inventory /etc/ansible/ansible.cfg  >> ansible.cfg 
+  110  grep -i log /etc/ansible/ansible.cfg 
+  111  grep -i log_path /etc/ansible/ansible.cfg 
+  112  grep -i log_path /etc/ansible/ansible.cfg  >> ansible.cfg 
+  113  grep -i privil /etc/ansible/ansible.cfg 
+  114  grep -A10 privilege_escalation /etc/ansible/ansible.cfg 
+  115  grep -A5 privilege_escalation /etc/ansible/ansible.cfg 
+  116  grep -A5 privilege_escalation /etc/ansible/ansible.cfg  >> ansible.cfg 
+  117  ls
+  118  vim ansible.cfg 
+  119  ls
+  120  vim /etc/ansible/ansible.cfg 
+  121  ls
+  122  vim playbook.yaml 
+  123  ls
+  124  ansible-playbook playbook.yaml 
+  125  cat ansible.cfg 
+  126  ls
+  127  mv inventory hosts
+  128  ansible-playbook playbook.yaml 
+  129  systemctl stop apache2
+  130  ansible-playbook playbook.yaml 
+  131  ls
+  132  mkdir files
+  133  ls
+  134  vim files/index.html
+  135  ls
+  136  vim playbook.yaml 
+  137  ls
+  138  ansible-playbook playbook.yaml 
+  139  vim files/index.html 
+  140  ansible-playbook playbook.yaml 
+  141  ls
+  142  md5sum hosts 
+  143  cd ..
+  144* 
+  145  cd ..
+  146  ls
+  147  grep -i md5 * 
+  148  grep -ir md5 * 
+  149  cd 12-Functions/
+  150  ls
+  151  vi functions.tf 
+  152  ls
+  153  cd 
+  154  cd - 
+  155  cd ..
+  156  ls
+  157  cd 20-Ansible/
+  158  ls
+  159  cd 02-Playbook/
+  160  ls
+  161  vim files/index.html 
+  162  ls
+  163  ansible-playbook playbook.yaml -vvv
+  164  ls
+  165  mkdir templates
+  166  ls
+  167  vim templates/info.j2
+  168  sl
+  169  ls
+  170  vim playbook.yaml 
+  171  ansible-playbook playbook.yaml 
+  172  vim playbook.yaml 
+  173  ansible-playbook playbook.yaml 
+  174  cat hosts 
+  175  ip addr 
+  176  ansible 172.31.0.100 -i hosts -m setup 
+  177  ls
+  178  vim templates/info.j2 
+  179  ansible-playbook playbook.yaml 
+  180  ls
+  181  vim playbook.yaml 
+  182  ansible-playbook playbook.yaml 
+  183  cat templates/info.j2 
+  184  vim playbook.yaml 
+  185  ansible-playbook playbook.yaml 
+  186  ls
+  187  cd ..
+  188  ls
+  189  cd ..
+  190  ls
+  191  git add . ; git commit -m "20-Ansible"; git push 
+  192  cd 20-Ansible/
+  193  ls
+  194  history > Ansible_History.txt 
